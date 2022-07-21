@@ -1,0 +1,27 @@
+<%- include("header.ejs"); -%>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/view.css">
+</head>
+
+<body>
+    <%- include("navbar.ejs",{id:uid}); -%>
+    <div class="container">
+        <h1 class="heading">Valid Emails</h1>
+        <ul class="list-group">
+        <% for(var i=0;i<emails.length;i++){ %>
+            <li class="list-group-item"><%=emails[i].email%> </li>
+        <% } %>
+        </ul>
+        <hr class="divider">
+        <h1 class="heading">Invalid Emails</h1>
+        <ul class="list-group">
+        <% for(var i=0;i<invalid.length;i++){ %>
+            <li class="list-group-item"><%=invalid[i].email%> </li>
+        <% } %>
+        </ul>
+    </div>
+</body>
+
+<%- include("footer.ejs"); -%>

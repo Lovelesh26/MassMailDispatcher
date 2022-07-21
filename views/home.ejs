@@ -1,0 +1,36 @@
+<%- include("header.ejs"); -%>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+
+
+<% if(isLoggedIn===true){ %>
+<%- include("navbar.ejs",{id:userid}); -%>
+<% } %>
+
+<div class="hero">
+    <div class="container">
+        <h1 class="heading">MailThem</h1>
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <% if(isLoggedIn===false){ %>
+            <a href="/login" class="login btn">Log-in</a>
+            <a href="/register" class="signup btn">Sign-up</a>
+        <% }else{ %>
+            <a href=<%= "/" +userid+ "/upload" %> class="upload btn">Upload</a>
+            <a href=<%= "/" +userid+ "/view" %> class="view btn">View</a>
+            <a href=<%= "/" +userid+ "/mail" %> class="mail btn">Mail All</a>
+            <a href=<%= "/" +userid+ "/logout" %> class="btn logout">Log Out</a>
+        <% } %>
+    </div>
+</div>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+
+<%- include("footer.ejs"); -%>

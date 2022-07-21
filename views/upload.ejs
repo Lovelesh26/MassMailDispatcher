@@ -1,0 +1,23 @@
+<%- include("header.ejs"); -%>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/upload.css">
+</head>
+
+<body>
+
+    <%- include("navbar.ejs",{id:userid}); -%>
+    <div class="container">
+        <h1 class="heading">Upload Your CSV File here</h1>
+        <div class="form">
+            <form action=<%= "/" +userid+ "/upload" %> method="post" enctype="multipart/form-data">
+                <div class="input-files">
+                    <label>Upload files here: </label>
+                    <input type="file" class="files" name="emails" required><br>
+                </div>
+                <button type="submit" class="btn btn-outline-primary mail-btn btn-lg">Upload</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+<%- include("footer.ejs"); -%>

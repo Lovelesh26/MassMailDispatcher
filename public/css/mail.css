@@ -1,0 +1,47 @@
+body{
+    background-color: #CAF0F8;
+}
+
+.subject{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    max-width: 95%;
+    text-align: center;
+}
+
+.body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    max-width: 95%;
+    margin-top: 4rem;
+}
+
+.container{
+    width:70%;
+    max-width: 1120px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.attachments{
+    margin-top:2rem;
+}
+
+.mail-btn{
+    margin-top: 2rem;
+    font-size: 1.75rem;
+}
+
+.heading{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.attachment-files{
+    font-size: 1.35rem;
+    margin: 2rem 0;
+}

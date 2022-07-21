@@ -1,0 +1,24 @@
+<%- include("header.ejs"); -%>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/mail.css">
+</head>
+
+<body>
+    <%- include("navbar.ejs",{id:userid}); -%>
+    <div class="container">
+        <h1 class="heading">Compose Your Mail Here</h1>
+        <form action=<%= "/" +userid+ "/mail" %> method="post" enctype="multipart/form-data">
+            <input type="text" class="subject" placeholder="Subject Of The Mail" name="subject" size="75"><br>
+            <textarea rows="10" cols="80" class="body" name="content" placeholder="Type here..." required></textarea><br>
+            <div class="attachment-files">
+                <label>Add attachments here: </label>
+                <input type="file" class="attachments" name="attachments" multiple><br>
+            </div>
+            <button type="submit" class="btn btn-outline-primary mail-btn btn-lg">Mail All</button>
+        </form>
+    </div>
+</body>
+
+<%- include("footer.ejs"); -%>

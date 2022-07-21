@@ -1,0 +1,27 @@
+
+<%- include("header.ejs"); -%>
+<title>Login</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/css/login.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin w-100 m-auto">
+  <form action="/login" method="post">
+    <i class="fa-solid fa-envelope-circle-check fa-6x"></i>
+    <h1 class="title h3 mb-3 fw-normal">Please Log-in</h1>
+
+    <div class="form-floating">
+      <input type="email" name="email" class="form-control" id="floatingInput" autocomplete="off" placeholder="name@example.com" required>
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+  </form>
+</main>   
+</body>
+<%- include("footer.ejs"); -%>

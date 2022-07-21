@@ -1,0 +1,75 @@
+body{
+    background-color: #CAF0F8;
+}
+
+/* 
+E8F9FD 9
+EFFFFD 9.5
+B8FFF9 7
+BFFFF0 8
+CAF0F8 9.5*/
+
+.container{
+    width:80%;
+    max-width:1120px;
+    margin:0 auto;
+}
+
+.hero{
+    padding:7% 0;
+}
+
+/* heading styling */
+.heading{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+/* content styling */
+
+/* font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif; */
+
+.content{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* button styling */
+
+.btn{
+    padding: 0.8rem 2rem;
+    /* background-color: #0AA1DD; */
+    border-color: #0AA1DD;
+    border-radius: 15px;
+    margin:2rem 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+.btn:hover{
+    background-color: #0AA1DD;
+    border-color: #0AA1DD;
+}
+
+.signup{
+    margin-left: 3rem;
+}
+
+.view{
+    margin:0 3rem;
+}
+
+.logout{
+    margin:0 3rem;
+    border-color: #FF6B6B;
+}
+
+.logout:hover{
+    background-color: #FF6B6B;
+    border-color: #FF6B6B;
+}
